@@ -1,0 +1,73 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.menu {
+  padding: 20px;
+  background-color: blueviolet;
+  height: 100px;
+  width: 100%;
+  color: white;
+  margin-top: 0;
+}
+p {
+  margin: 0;
+  font-size: x-large;
+}
+.DropDownMenu {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover .arrow_icon_anim {
+  animation: rotate 0.1s forwards;
+}
+
+a:not(hover) .arrow_icon_anim {
+  animation: rotateback 0.1s forwards;
+}
+
+.DropDownMenuContent {
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 10px;
+  /* border: solid gray 1px;
+  border-radius: 5px; */
+  box-shadow: 2px 2px 2px 3px rgb(111, 35, 182);
+}
+
+.DropDownMenu:hover .DropDownMenuContent {
+  display: block;
+  background-color: white;
+}
+
+.DropDownMenuContent:hover {
+  display: block;
+}
+
+@keyframes rotateback {
+  from {
+    transform: rotateZ(90deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(90deg);
+  }
+}
